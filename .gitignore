@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cypress output
+cypress/videos/
+cypress/screenshots/
+
+# Ambiente e cache
+.env
+.env.local
+.cache/
+dist/
+coverage/
+
+# Configurações do sistema operacional e editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# GitHub-specific
+*.swp
