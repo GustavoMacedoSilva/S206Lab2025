@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "564ce6af-5d62-422f-aa03-4d1de1514f8b",
+		"name": "Prova",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45105797",
+		"_collection_link": "https://gustavomacedosilva-5341680.postman.co/workspace/Gustavo-Macedo-Silva's-Workspac~928b9e0d-1e60-47d6-84fc-37e3849eafb4/collection/45105797-564ce6af-5d62-422f-aa03-4d1de1514f8b?action=share&source=collection_link&creator=45105797"
+	},
+	"item": [
+		{
+			"name": "Login-BemSucedido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Prova de QA Inatel testeeeee\",\r\n  \"body\": \"Esse é um post para fazer o exercicio da prova.\",\r\n  \"userId\": 69\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualização-de-Post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 10,\r\n  \"title\": \"Aqui atualizamos o post e teoricamente é pra funcionar dessa vez pfvr\",\r\n  \"body\": \"porfavorporfavorporfavorporfavorporfavorporfavorporfavorporfavorporfavorporfavorporfavor.\",\r\n  \"userId\": 69\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/10",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delet-Um-Post-Que-Nao-Existe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/9999",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						"9999"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
