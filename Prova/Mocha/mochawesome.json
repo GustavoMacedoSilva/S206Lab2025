@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-19T19:35:45.043Z",
+    "end": "2025-06-19T19:35:52.089Z",
+    "duration": 7046,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7afdb115-9671-469d-8a5a-d1b12fb0c812",
+      "title": "",
+      "fullFile": "cypress\\e2e\\prova.cy.js",
+      "file": "cypress\\e2e\\prova.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "40012546-6666-426d-a223-0b9b95c52d8f",
+          "title": "Prova",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Entra no site, loga, compra 1 item e desloga",
+              "fullTitle": "Prova Entra no site, loga, compra 1 item e desloga",
+              "timedOut": null,
+              "duration": 3306,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.saucedemo.com/');\nlogarUsuarioFuncional();\ncy.get('[data-test=\"add-to-cart-sauce-labs-fleece-jacket\"]').click();\ncy.get('[data-test=\"shopping-cart-link\"]').click();\ncy.get('[data-test=\"checkout\"]').click();\ncredenciaisCompra();\ncy.get('[data-test=\"finish\"]').click();\ncy.get('[data-test=\"back-to-products\"]').click();\ndeslogarUsuario();",
+              "err": {},
+              "uuid": "870b35ce-e107-4a5e-859c-fbf302c5609c",
+              "parentUUID": "40012546-6666-426d-a223-0b9b95c52d8f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tentar comprar sem colocar as credenciais (sem first name especificamente)",
+              "fullTitle": "Prova Tentar comprar sem colocar as credenciais (sem first name especificamente)",
+              "timedOut": null,
+              "duration": 1293,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.saucedemo.com/');\nlogarUsuarioFuncional();\ncy.get('[data-test=\"add-to-cart-sauce-labs-fleece-jacket\"]').click();\ncy.get('[data-test=\"shopping-cart-link\"]').click();\ncy.get('[data-test=\"checkout\"]').click();\ncy.get('[data-test=\"continue\"]').click();\ncy.get('[data-test=\"error\"]').should(\"contain.text\", \"Error: First Name is required\");",
+              "err": {},
+              "uuid": "17b59d4a-debc-4a37-9ce2-da97998a09a0",
+              "parentUUID": "40012546-6666-426d-a223-0b9b95c52d8f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Começar uma compra e excluir do carrinho a compra e ver se realmente é excluido",
+              "fullTitle": "Prova Começar uma compra e excluir do carrinho a compra e ver se realmente é excluido",
+              "timedOut": null,
+              "duration": 987,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.saucedemo.com/');\nlogarUsuarioFuncional();\ncy.get('[data-test=\"add-to-cart-sauce-labs-fleece-jacket\"]').click();\ncy.get('[data-test=\"shopping-cart-link\"]').click();\ncy.get('[data-test=\"remove-sauce-labs-fleece-jacket\"]').click();\ncy.get('[data-test=\"inventory-item-name\"]').should(\"not.exist\");",
+              "err": {},
+              "uuid": "4a0f3f1c-636e-4157-99bb-69b8842f4caf",
+              "parentUUID": "40012546-6666-426d-a223-0b9b95c52d8f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "870b35ce-e107-4a5e-859c-fbf302c5609c",
+            "17b59d4a-debc-4a37-9ce2-da97998a09a0",
+            "4a0f3f1c-636e-4157-99bb-69b8842f4caf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5586,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
